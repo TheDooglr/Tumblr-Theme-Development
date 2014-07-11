@@ -1,0 +1,672 @@
+<html>
+    <head>
+        <title>{Title}</title>
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+        <meta name="color:LED Border Bright" content=""/>
+        <meta name="color:LED Glow" content=""/>
+        <meta name="viewport" content="initial-scale=1.0" />
+        <meta name="text:Twitter name" content="" />
+        <meta name="image:Background" content="http://static.tumblr.com/..."/>
+        <meta name="color:Background" content="#000"/>
+    
+<!-- Styles -->
+        
+<link rel="stylesheet" href="http://static.tumblr.com/f1whv92/Mp9l6ewcg/reset.css" />
+<link href="http://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet" type="text/css"/>
+<style type="text/css">
+
+
+     
+     /*General*/
+     
+     body {
+         min-width: 320px;
+         margin-right: auto;
+         margin-left: auto;
+         color: {color:LED Border Bright};
+         text-shadow: 0 0px 10px {color:LED Glow};
+         background: {color:Background} url('{image:Background}') no-repeat center fixed; 
+     }
+     
+     /*Header Section*/
+     
+     #header {
+         text-align: center;
+         margin-top: 2em;
+         padding-top: 25px;
+         padding-bottom: 25px;
+         margin-left: auto;
+         margin-right: auto;
+         margin-bottom: 1em;
+         border-radius: 10px 10px 0 0;
+         box-shadow: 0px 0px 10px 3px {color:LED Glow} inset;
+         border: 1px solid {color:LED Border Bright};
+         background-color: rgba(0,0,0,0.50);
+     }
+     
+     #title {
+         padding-bottom: 1em;
+     }
+     
+     #title a:link, #title a:visited, #title a:hover, #title a:active {
+         color: {color:LED Border Bright};
+         text-shadow: 0 0px 10px {color:LED Glow};
+         font-family: 'Audiowide', Verdana, Arial, Helvetica;
+         text-decoration: none;
+         padding-bottom: 1em;
+         text-align: center;
+     }
+     
+     #description {
+         font-family: 'Audiowide', Verdana, Arial, Helvetica;
+         color: {color:LED Border Bright};
+         text-shadow: 0 0px 10px {color:LED Glow};
+     }
+     
+     /*Menu*/
+     
+     #menu {
+        margin-bottom: 1em;
+        text-align: center;
+        background-color: rgba(0,0,0,0.5);
+     }
+
+     #menu a:link, #menu a:visited, #menu a:hover, #menu a:active {
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: bold;
+        font-family: Verdana, Arial, Helvetica;
+        text-decoration: none;
+        color: {color:LED Border Bright};
+        text-shadow: 0 0px 10px {color:LED Glow};
+        text-align: center;
+     }
+     
+     /*Posts CSS*/
+     
+     #posts {
+         margin-left: auto;
+         margin-right: auto;
+         box-shadow: 0px 0px 10px 3px {color:LED Glow} inset;
+         border: 1px solid {color:LED Border Bright};
+         border-radius: 0 0 10px 10px;
+         padding-top: 3em;
+         padding-bottom: 1em;
+         background-color: rgba(0,0,0,0.5);
+     }
+     
+     .post_text {
+         margin-bottom: 3em;
+         padding-bottom: 1em;
+         border-bottom: 1px solid {color:LED Border Bright};
+     }
+     
+     .post_photo {
+         text-align: center;
+         margin-bottom: 3em;
+     }
+     
+     .post_panorama {
+         text-align: center;
+         margin-bottom: 3em;
+     }
+     
+     .post_photoset {
+         text-align: center;
+         margin-bottom: 3em;
+     }
+     
+     .post_quote {
+         text-align: center;
+         margin-bottom: 3em;
+     }
+     
+     .post_link {
+         text-align: center;
+         margin-bottom: 3em;
+     }
+     
+     .post_video {
+         text-align: center;
+         margin-bottom: 3em;
+     }
+     
+     .post_audio {
+         text-align: center;
+         margin-bottom: 3em;
+     }
+     
+     .post_chat {
+         
+     }
+     
+     .chat {
+         
+     }
+     
+     .glowbox {
+         min-width: 500px;
+         display: inline-block;
+         margin-left: auto;
+         margin-right: auto;
+         text-align: center;
+         border: solid 1px {color:LED Border Bright};
+         box-shadow: 10px 0px 20px -7px {color:LED Glow}, -10px 0px 20px -7px {color:LED Glow};
+     }
+     
+     /*Footer Pagination*/
+     
+     #footer {
+         width: 500px;
+         margin-right: auto;
+         margin-left: auto;
+         text-align: center;
+         margin-bottom: 2em;
+         
+     }
+     
+     #footer a:link, #footer a:visited, #footer a:hover, #footer a:active {
+         text-align: center;
+         color: {color:LED Border Bright};
+         text-shadow: 0 0px 10px {color:LED Glow};
+         text-decoration: none;
+         font-family: Verdana, Arial, Helvetica;
+         font-size: 1.75em;
+     }
+     
+     .current_page {
+         color: {color:LED Border Bright};
+         text-shadow: 0 0px 10px {color:LED Glow};
+         text-decoration: none;
+         text-transform: uppercase;
+         font-family: Verdana, Arial, Helvetica;
+         font-size: 1.75em;
+     }
+     
+          /*Mobile*/
+     @media only screen and (max-width: 600px) {
+     
+     .box500 {
+         display: none;
+     }
+     
+     body {
+         
+         width: 100%;
+         
+     }
+     
+     #header {
+         margin-top: 0;
+     }
+     
+     #title a:link, #title a:visited, #title a:hover, #title a:active {
+         color: {color:LED Border Bright};
+         text-shadow: 0 0px 10px {color:LED Glow};
+         font-family: 'Audiowide', Verdana, Arial, Helvetica;
+         text-decoration: none;
+         padding-bottom: 1em;
+         font-size: 3em;
+     }
+     
+     #description {
+         font-size: 1.25em;
+     }
+     
+     #menu li {
+        margin: 7px 5px 7px 5px;
+        padding: 10px;
+        border-radius: 0 5px 0 5px;
+        display: inline-table;
+        border: 1px solid {color:LED Border Bright};
+        box-shadow: 0px 0px 10px 3px {color:LED Glow} inset;
+        background-color: rgba(0,0,0,0.5);
+     }
+     
+     .caption {
+        display: none;
+     }
+     
+     .tab {
+         display: none;
+     }
+     
+     .glowbox {
+         min-width: 250px;
+     }
+     
+     .likebutton {
+         list-style: none;
+         width: 250px;
+         margin: auto;
+         padding-top: 10px;
+         padding-bottom: 10px;
+         border-bottom: 1px solid {color:LED Border Bright};
+         border-right: 1px solid {color:LED Border Bright};
+         border-left: 1px solid {color:LED Border Bright};
+         box-shadow: 0px 0px 10px 3px {color:LED Glow} inset;
+         border-radius: 0px 0px 10px 10px;
+
+     }
+     
+     .likebutton li {
+         display: inline-block;
+         margin: 0;
+         padding: 7px 15px;
+         height: 20px;
+     }
+     
+     .post_text {
+         margin-left: 2em;
+         margin-right: 2em;
+         font-family: "Courier New", Courier, monospace;
+         line-height: 1.1em;
+         font-size: 1em;
+     }
+     
+     .post_text p {
+         margin-bottom: 1em;
+     }
+     
+     .post_text a:link, .post_text a:visited, .post_text a:hover, .post_text a:active {
+         font-size: 1.2em;
+         color: {color:LED Border Bright};
+         text-shadow: 0 0px 10px {color:LED Glow};
+         font-family: Verdana, Arial, Helvetica;
+     }
+     
+     .post_text h3 {
+         margin-left: auto;
+         margin-right: auto;
+         margin-bottom: 2em;
+     }
+     
+     .caption a:link, .caption a:visited, .caption a:hover, .caption a:active {
+         color: {color:LED Border Bright};
+         text-shadow: 0 0px 10px {color:LED Glow};
+         text-decoration: none;
+     }
+     
+     .caption a:hover {
+         text-decoration: underline;
+     }
+     
+     }
+     
+     /*tablets and desktops*/
+     
+     @media only screen and (min-width: 601px) {
+
+     .box250 {
+         display: none;
+     }
+     
+     body {
+         width: 800px;
+     }
+     
+     #posts {
+         margin-bottom: 2em;
+         clear: both;
+     }
+     
+     #title a:link, #title a:visited, #title a:hover, #title a:active {
+         font-size: 2em;
+         color: {color:LED Border Bright};
+         text-shadow: 0 0px 10px {color:LED Glow};
+         font-family: 'Audiowide', Verdana, Arial, Helvetica;
+         text-decoration: none;
+         padding-bottom: 1em;
+     }
+     
+     #description {
+         font-size: 1em;
+     }
+     
+     #menu li {
+        display: inline;
+        margin-bottom: 2em;
+        padding: 15px;
+        border-radius: 0;
+        border: 1px solid {color:LED Border Bright};
+        float: right;
+        background-color: rgba(0,0,0,0.75);
+     }
+     
+     #menu li:hover {
+        box-shadow: 0px 0px 10px 3px {color:LED Glow} inset;
+        transition: all .5s linear;
+     }
+     
+     #menu a:link, #menu a:visited, #menu a:hover, #menu a:active {
+        font-size: 1em;
+     }
+     
+     #header {
+         margin-bottom: 0;
+         text-align: center;
+     }
+     
+     /*.caption{
+         width: 80%;
+         margin-left: auto;
+         margin-right: auto;
+         font-family: arial;
+         line-height: 1.25em;
+         text-align: left;
+         margin-top: 1em;
+     }*/
+     
+     .caption {
+         background: rgba(0,0,0,0.25);
+         width: 500px;
+         margin: auto;
+         padding-top: 15px;
+         padding-bottom: 15px;
+         border-bottom: 1px solid {color:LED Border Bright};
+         border-right: 1px solid {color:LED Border Bright};
+         border-left: 1px solid {color:LED Border Bright};
+         padding-bottom: 15px;
+         box-shadow: 0px 0px 10px 3px {color:LED Glow} inset;
+         font-size: 1em;
+         font-family: "Courier New", Courier, monospace;
+         display: none;
+         text-align: left;
+         line-height: 1.25em;
+     }
+     
+     .caption p {
+         margin-left: 15px;
+         margin-right: 15px;
+     }
+     
+     .tab {
+         width: 3em;
+         height: .75em;
+         background-color: {color:LED Border Bright};
+         border-bottom: 1px solid {color:LED Border Bright};
+         border-left: 1px solid {color:LED Border Bright};
+         border-right: 1px solid {color:LED Border Bright};
+         border-radius: 0px 0px 15px 15px;
+         margin: auto;
+         cursor: pointer;
+     }
+     
+     .likebutton {
+         list-style: none;
+         text-align: right;
+         width: 500px;
+         margin: auto;
+         padding-top: 10px;
+         padding-bottom: 10px;
+         border-bottom: 1px solid {color:LED Border Bright};
+         border-right: 1px solid {color:LED Border Bright};
+         border-left: 1px solid {color:LED Border Bright};
+         box-shadow: 0px 0px 10px 3px {color:LED Glow} inset;
+         border-radius: 0px 0px 10px 10px;
+     }
+     
+     .likebutton li {
+         display: inline-block;
+         margin: 0;
+         padding: 7px 15px;
+         height: 20px;
+     }
+     
+     .like_button {
+         padding-right: 10px;
+     }
+     
+     .post_text {
+         margin-left: 2em;
+         margin-right: 2em;
+         font-family: "Courier New", Courier, monospace;
+         line-height: 1.2em;
+         font-size: 1.25em;
+     }
+     
+     .post_text p {
+         margin-bottom: 1em;
+     }
+     
+     .post_text h3 a:link, .post_text h3 a:visited, .post_text h3 a:hover, .post_text h3 a:active {
+         font-size: 2em;
+         color: {color:LED Border Bright};
+         text-shadow: 0 0px 10px {color:LED Glow};
+         font-family: 'Audiowide', Verdana, Arial, Helvetica;
+     }
+     
+     .post_text h3 {
+         margin-left: auto;
+         margin-right: auto;
+         margin-bottom: 2em;
+     }
+     
+     .caption a:link, .caption a:visited, .caption a:hover, .caption a:active {
+         color: {color:LED Border Bright};
+         text-shadow: 0 0px 10px {color:LED Glow};
+         text-decoration: none;
+     }
+     
+     .caption a:hover {
+         text-decoration: underline;
+     }
+     
+     }
+     
+     
+</style> 
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+            families: ['Audiowide']
+            }
+        });
+    </script>
+    
+<script>
+    $(document).ready(function(){
+        $('.tab').click(function(){
+            $(this).parent().children('.caption').slideToggle(750);
+        });
+        if ($(".caption").p().length > 0) {
+            $('.tab').show();
+        };
+    });
+</script>
+
+ <script>
+     $(function() {
+        var search = $("#txtSearch").val();
+        var placeholder = "Search...";
+        var fadeToOpacity = 0.4;
+        $("#txtSearch").fadeTo("normal", fadeToOpacity);
+        if (search == "") {
+     $("#txtSearch").val(placeholder);
+     }
+     $("#txtSearch").blur(function() {
+        search = $("#txtSearch").val();
+        if (!(search != "" && search != placeholder)) {
+        $("#txtSearch").val(placeholder);
+     }
+     $("#txtSearch").fadeTo("normal", fadeToOpacity);
+     });
+     $("#txtSearch").focus(function() {
+        search = $("#txtSearch").val();
+        if (search == placeholder) {
+        $("#txtSearch").val("");
+     }
+     $("#txtSearch").fadeTo("normal", 1);
+     });
+     $("#btnSearch").click(function() {
+     $("#frmSearch").slideToggle("normal");
+     $(this).toggleClass("active");
+ //  $("#txtSearch").focus();
+     });
+     });
+</script>
+    
+    
+    </head>
+    <body>
+        <div id="header">
+                <h1 id="title"><a href="/">{Title}</a></h1>
+
+                {block:Description}
+                    <p id="description">{Description}</p>
+                {/block:Description}
+        </div>
+
+            <nav id="menu">        
+              {block:HasPages}
+              {block:Pages}<li><a href="{URL}">{Label}</a></li>{block:Pages}
+              {/block:HasPages}
+              {block:AskEnabled}<li><a href="/ask">Ask</a></li>{/block:AskEnabled}
+              {block:SubmissionsEnabled}<li><a href="/submit">Submit</a></li>{/block:SubmissionsEnabled}                 
+              <li><a href="/archive">Archive</a></li>
+              <li><a href="{RSS}">RSS</a></li>
+              {block:IfTwitterName}
+              <li><a href="http://twitter.com/{text:Twitter name}">Twitter</a></li>
+              {/block:IfTwitterName}
+            </nav> 
+        
+        <ol id="posts">
+            {block:Posts}{block:Text}
+                    <li class="post_text">
+                        {block:Title}
+                            <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}{Body}
+                    </li>
+                    
+                {/block:Text}{block:Photo}
+                    <li class="post_photo">
+                        <div class="glowbox">
+                        <img class="box500" src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+                        <img class="box250" src="{PhotoURL-250}" alt="{PhotoAlt}"/>
+                        </div>
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                            {/block:Caption}
+                            <ul class="likebutton">
+                                <li>{ReblogButton color="white"}</li>
+                                <li>{LikeButton color="white"}</li>
+                            </ul>
+                            <div class="tab"></div>
+                        
+                    </li>
+                {/block:Photo}{block:Panorama}
+                    <li class="post_panorama">
+                        <div class="glowbox">
+                        {LinkOpenTag}
+                            <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                        {LinkCloseTag}
+                        </div>
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                            <ul class="likebutton">
+                                <li>{ReblogButton color="white"}</li>
+                                <li>{LikeButton color="white"}</li>
+                            </ul>
+                            <div class="tab"></div>
+                    </li>
+                {/block:Panorama}{block:Photoset}
+                    <li class="post_photoset">
+                        <div class="glowbox box500">
+                        {Photoset-500}</div>
+                        <div class="glowbox box250">{Photoset-250}</div>{block:Caption}
+                            <div class="caption">{Caption}</div>
+                            <div class="tab"></div>
+                        {/block:Caption}
+                            <ul class="likebutton">
+                                <li>{ReblogButton color="white"}</li>
+                                <li>{LikeButton color="white"}</li>
+                            </ul>
+                            <div class="tab"></div>
+                    </li>
+                {/block:Photoset}{block:Quote}
+                    <li class="post_quote">
+                        "{Quote}"
+
+                        {block:Source}
+                            <div class="source">{Source}</div>
+                        {/block:Source}
+                    </li>
+                {/block:Quote}{block:Link}
+                    <li class="post_link">
+                        <a href="{URL}" class="link" {Target}>{Name}</a>
+
+                        {block:Description}
+                            <div class="description">{Description}</div>
+                        {/block:Description}
+                    </li>
+                {/block:Link}{block:Chat}
+                    <li class="post_chat">
+                        {block:Title}
+                            <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+
+                        <ul class="chat">
+                            {block:Lines}
+                                <li class="{Alt} user_{UserNumber}">
+                                    {block:Label}
+                                        <span class="label">{Label}</span>
+                                    {/block:Label}{Line}
+                                </li>
+                            {/block:Lines}
+                        </ul>
+                    </li>
+                {/block:Chat}{block:Video}
+                    <li class="post_video">
+                        <div class="glowbox box500">
+                        {Video-500}</div>
+                        <div class="glowbox box250">
+                        {Video-250}</div>{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                            <ul class="likebutton">
+                                <li>{ReblogButton color="white"}</li>
+                                <li>{LikeButton color="white"}</li>
+                            </ul>
+                            <div class="tab"></div>
+                    </li>
+                {/block:Video}{block:Audio}
+                    <li class="glowbox" class="post_audio">
+                        {AudioEmbed}{block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                            <ul class="likebutton">
+                                <li>{ReblogButton color="white"}</li>
+                                <li>{LikeButton color="white"}</li>
+                            </ul>
+                            <div class="tab"></div>
+                    </li>
+                {/block:Audio}{/block:Posts}
+                
+        <div id="footer">
+            {block:PreviousPage}
+                <a href="{PreviousPage}">&#171;</a><span class="current_page">&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+            {/block:PreviousPage}
+            {block:JumpPagination length="5"}{block:CurrentPage}
+                    <span class="current_page">{PageNumber}&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+                {/block:CurrentPage}{block:JumpPage}
+                    <a class="jump_page" href="{URL}">{PageNumber}</a><span class="current_page">&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+                {/block:JumpPage}{/block:JumpPagination}
+            {block:NextPage}
+                <a href="{NextPage}">&#187;</a>
+            {/block:NextPage}
+        </div>
+                
+        </ol>
+        
+        <!-- Footer Pagination -->
+
+    </body>
+</html>
